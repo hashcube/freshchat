@@ -1,0 +1,20 @@
+{
+  "name": "freshchat",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "sh ./postinstall.sh"
+  },
+  "devkit": {
+    "clientPaths": {
+      "freshchat": "js"
+    },
+    "extensions": {
+      "build": "build",
+      "android": "android"
+    }
+  },
+  "dependencies": {
+    "fs-extra": "^1.0.0",
+    "xmldoc": "^0.5.1"
+  }
+}

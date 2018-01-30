@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Notification Icon Size -->
+    <dimen name="freshchat_notification_large_icon_size">40dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="freshchat_default_icon_size">48dp</dimen>
+    <dimen name="freshchat_default_icon_padding">10dp</dimen>
+
+    <!-- Message Icon Dimens -->
+    <dimen name="freshchat_message_send_icon_size">@dimen/freshchat_default_icon_size</dimen>
+    <dimen name="freshchat_message_send_icon_padding">@dimen/freshchat_default_icon_padding</dimen>
+
+    <dimen name="freshchat_message_attach_icon_size">@dimen/freshchat_default_icon_size</dimen>
+    <dimen name="freshchat_message_attach_icon_padding">@dimen/freshchat_default_icon_padding</dimen>
+
+    <dimen name="freshchat_message_upload_status_icon_size">20dp</dimen>
+    <dimen name="freshchat_message_upload_status_icon_padding">4dp</dimen>
+
+    <dimen name="freshchat_message_avatar_icon_size">@dimen/freshchat_default_icon_size</dimen>
+
+    <!-- Misc Message UI Dimens -->
+    <dimen name="freshchat_message_voice_play_icon_size">36dp</dimen>
+
+    <dimen name="freshchat_message_lisitem_divider_height">4dp</dimen>
+
+    <dimen name="freshchat_chat_resolution_prompt_divider_height">1dp</dimen>
+
+    <dimen name="freshchat_message_reply_frame_min_height">48dp</dimen>
+    <dimen name="freshchat_message_item_padding">4dp</dimen>
+    <dimen name="freshchat_message_item_margin">4dp</dimen>
+    <dimen name="freshchat_message_item_min_width">100dp</dimen>
+    <dimen name="freshchat_message_button_min_width">100dp</dimen>
+
+    <!-- Channel Icon Dimens -->
+    <dimen name="freshchat_channel_icon_size">48dp</dimen>
+    <dimen name="freshchat_channel_icon_padding">8dp</dimen>
+    <dimen name="freshchat_channel_icon_alt_view_size">48dp</dimen>
+
+    <!-- FAQ Category Icon Dimens -->
+    <dimen name="freshchat_category_icon_size">72dp</dimen>
+    <dimen name="freshchat_category_icon_padding">16dp</dimen>
+    <dimen name="freshchat_category_icon_alt_view_size">40dp</dimen>
+
+    <!-- FAQ Article UI Dimens -->
+    <dimen name="freshchat_voting_view_divider_height">1dp</dimen>
+    <dimen name="freshchat_faq_content_padding_bottom">85px</dimen>
+
+</resources>

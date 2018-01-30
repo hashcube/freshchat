@@ -1,0 +1,114 @@
+<resources>
+
+	<string name="tools_label_duration">Duration</string>
+
+	<string name="freshchat_default_agent_name">Support</string>
+
+	<string name="freshchat_chat_deeplink">View</string>
+	<string name="freshchat_chat_deeplink_faq">View FAQ</string>
+	<string name="freshchat_chat_message_composer_hint">Type a message</string>
+	<string name="freshchat_chat_capture_from_camera">Take a picture</string>
+	<string name="freshchat_chat_select_from_gallery">Upload from gallery</string>
+
+	<string name="freshchat_channel_list_empty">Oops, no message channels here!</string>
+	<string name="freshchat_channel_disabled">Oops, this chat is no longer available</string>
+
+	<string name="freshchat_faqs_reload_and_redirect">FAQs updated. Redirecting...</string>
+	<string name="freshchat_faq_list_empty">Sorry! There are no FAQs available</string>
+	<string name="freshchat_faq_vote_successful">Thanks for your feedback!</string>
+	<string name="freshchat_faq_voting_prompt">Was this FAQ helpful?</string>
+	<string name="freshchat_faq_upvote">@string/freshchat_yes</string>
+	<string name="freshchat_faq_downvote">@string/freshchat_no</string>
+	<string name="freshchat_faq_video_loading">Loading video...  </string>
+	<string name="freshchat_faq_search_query_hint">Search FAQs</string>
+	<string name="freshchat_faq_failed_to_load">This FAQ is no longer available</string>
+	<string name="freshchat_faq_rich_media_content_cannot_be_displayed">Connect to internet to view the rich media content</string>
+
+	<string name="freshchat_yes">Yes</string>
+	<string name="freshchat_no">No</string>
+
+	<!-- Hint for Input Fields -->
+
+
+	<!-- Content descriptions for accessibility -->
+	<string name="freshchat_content_description_send_message">Send message</string>
+	<string name="freshchat_content_description_attach_picture">Attach a picture</string>
+	<string name="freshchat_content_description_send_voice_message">Record a voice message</string>
+	<string name="freshchat_content_description_upload_status">Message upload Status</string>
+
+	<!-- Error messages -->
+	<string name="freshchat_error_message_not_connected_to_internet">No internet connection!</string>
+	<string name="freshchat_error_message_faq_section_not_enabled">Uh-uh! FAQ section is unavailable</string>
+	<string name="freshchat_error_message_inbox_section_not_enabled">Uh-uh! Chat section is unavailable. </string>
+	<string name="freshchat_error_message_account_not_active">This section is disabled</string>
+	<string name="freshchat_error_message_init_not_completed">Freshchat SDK not initialized. Please invoke Freshchat.init() first and invoke {{method_name}} again!</string>
+	<string name="freshchat_error_message_init_not_completed_method_name_placeholder">{{method_name}}</string>
+	<string name="freshchat_error_message_failed_to_launch_support_section">Oops! Failed to launch</string>
+
+	<!-- Permission prompts and rationale -->
+	<string name="freshchat_chat_camera_permissions_granted">Permission to access camera granted</string>
+	<string name="freshchat_chat_camera_permissions_not_granted">Permission to access camera denied</string>
+	<string name="freshchat_chat_camera_permissions_rationale">Camera permission is required to take pictures</string>
+
+	<string name="freshchat_chat_voice_messaging_permissions_granted">The permissions necessary for voice messaging have been granted</string>
+	<string name="freshchat_chat_voice_messaging_permissions_not_granted">The permissions necessary for voice messaging have not been granted</string>
+	<string name="freshchat_chat_voice_messaging_permissions_rationale">Audio Recording permission and Write External Storage permission is required to capture and send voice messages</string>
+	<string name="freshchat_chat_voice_messaging_audio_recording_permission_rationale">Audio Recording permission is required to capture and send voice messages</string>
+	<string name="freshchat_chat_voice_messaging_write_storage_permission_rationale">Write External Storage permission is required to capture and send voice messages</string>
+
+	<string name="freshchat_voice_message_preview">[Voice ({{duration}})]</string>
+	<string name="freshchat_voice_message_preview_duration_tag">{{duration}}</string>
+	<string name="freshchat_speaker_phone_on">Audio will play through your ear piece</string>
+	<string name="freshchat_speaker_phone_off">"Audio will play through your phone's speaker"</string>
+	<string name="freshchat_voice_message_too_short">The message you are trying to send spans less than a second. Are you sure you want to send it ?</string>
+	<string name="freshchat_voice_message_too_long">Reached voice message max duration limit, please release to send the message, otherwise message will get discarded soon</string>
+
+	<string name="freshchat_contact_us">Message Us</string>
+	<string name="freshchat_message_sending_failed">Message not sent. We\'ll try again</string>
+	<string name="freshchat_message_content_copied_to_clipboard">Message copied</string>
+	<string name="freshchat_chat_unknown_content_type">Message content not supported on this version. Please update the app</string>
+
+	<string name="freshchat_error_no_matching_faq_categories_found">No matching FAQ categories found !</string>
+	<string name="freshchat_error_no_matching_faqs_found">No matching FAQs found !</string>
+
+	<!-- Activity Title -->
+	<string name="freshchat_activity_title_category_list">FAQs</string>
+	<string name="freshchat_activity_title_article_list">FAQs</string>
+	<string name="freshchat_activity_title_article_detail">FAQ</string>
+	<string name="freshchat_activity_title_channel_list">Conversations</string>
+
+	<!-- Menu title -->
+	<string name="freshchat_menu_item_search_faqs">Search</string>
+	<string name="freshchat_menu_item_contact_us">Message Us</string>
+	<string name="freshchat_menu_item_toggle_speaker">Toggle speakerphone</string>
+
+	<!-- Strings for Customer Satisfaction related UI Elements -->
+	<string name="freshchat_chat_resolution_confirmation_prompt">Did we address your concerns?</string>
+	<string name="freshchat_chat_resolution_confirmation_prompt_positive">@string/freshchat_yes</string>
+	<string name="freshchat_chat_resolution_confirmation_prompt_negative">@string/freshchat_no</string>
+	<string name="freshchat_chat_resolution_suggestions_prompt">How could we have helped you better?</string>
+	<string name="freshchat_chat_resolution_user_comments_hint">Tell us</string>
+	<string name="freshchat_chat_rating_submit">Send</string>
+
+	<!--Strings for Typically Replies in-->
+	<string name="freshchat_typically_replies_within_a_minute">Typically replies within a minute</string>
+	<string name="freshchat_typically_replies_within_x_minutes">Typically replies within {{minutes}} minutes</string>
+	<string name="freshchat_typically_replies_within_an_hour">Typically replies within an hour</string>
+	<string name="freshchat_typically_replies_within_2_hours">Typically replies within 2 hours</string>
+	<string name="freshchat_typically_replies_within_few_hours">Typically replies within few hours</string>
+	<string name="freshchat_placeholder_minutes">{{minutes}}</string>
+
+	<!--Strings for notifications-->
+	<string name="freshchat_support_message_notification_title">{{app_name}}</string>
+	<string name="freshchat_promotional_message_notification_title">{{app_name}}</string>
+	<string name="freshchat_placeholder_app_name">{{app_name}}</string>
+
+	<!--Strings for Auto start prompt displayed to users on xiaomi devices -->
+	<string name="freshchat_xiaomi_auto_start_prompt_message">Please enable Autostart to receive notifications when the app is in the background</string>
+	<string name="freshchat_xiaomi_auto_start_prompt_positive">@android:string/ok</string>
+	<string name="freshchat_xiaomi_auto_start_prompt_negative">@android:string/cancel</string>
+
+	<!-- File Provider Authority Name of the form your_app_package_name.provider Eg: com.example.myapp.provider -->
+	<string name="freshchat_file_provider_authority" translatable="false"></string>
+
+</resources>

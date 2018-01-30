@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Action Icons -->
+    <attr name="freshchatPlayIcon" format="reference" />
+    <attr name="freshchatStopIcon" format="reference" />
+    <attr name="freshchatSendIcon" format="reference" />
+    <attr name="freshchatCancelIcon" format="reference" />
+    <attr name="freshchatAttachIcon" format="reference" />
+    <attr name="freshchatRecordIcon" format="reference" />
+
+    <!-- Menu Icons -->
+    <attr name="freshchatSearchIcon" format="reference" />
+    <attr name="freshchatSpeakerIcon" format="reference" />
+    <attr name="freshchatEarpieceIcon" format="reference" />
+    <attr name="freshchatContactUsIcon" format="reference" />
+
+    <!-- Misc Icons-->
+    <attr name="freshchatTeamMemberAvatarIcon" format="reference" />
+
+    <!-- Chat Bubbles -->
+    <attr name="freshchatChatBubbleLeft" format="reference" />
+    <attr name="freshchatChatBubbleRight" format="reference" />
+
+    <!-- Misc -->
+    <attr name="freshchatAlertDialog" format="reference" />
+    <attr name="freshchatProgressBarStyle" format="reference" />
+    <attr name="freshchatVoiceVisualizer" format="reference" />
+    <attr name="freshchatVoiceMessageSeekbar" format="reference" />
+    <attr name="freshchatVoiceMessageSeekbarThumb" format="reference" />
+    <attr name="freshchatActionSelectableItemBackground" format="reference" />
+
+    <!-- Text Appearance Customizations - Common -->
+    <attr name="freshchatContactUsTextStyle" format="reference" />
+
+    <!-- FAQ Category List Item Customizations -->
+    <!-- Style for the category list view -->
+    <attr name="freshchatFAQCategoryListStyle" format="reference" />
+    <attr name="freshchatFAQListEmptyTextStyle" format="reference" />
+
+    <!-- Style for the each of the items in the category list -->
+    <attr name="freshchatFAQCategoryListItemStyle" format="reference" />
+    <attr name="freshchatFAQCategoryNameTextStyle" format="reference" />
+    <attr name="freshchatFAQCategoryDescriptionTextStyle" format="reference" />
+    <attr name="freshchatFAQCategoryAltIconStyle" format="reference" />
+
+    <!-- Article List Customizations -->
+    <attr name="freshchatFAQListStyle" format="reference" />
+    <attr name="freshchatFAQListItemStyle" format="reference" />
+
+    <!-- Article Detail Customizations -->
+    <attr name="freshchatFAQVotingPromptViewStyle" format="reference" />
+    <attr name="freshchatFAQVotingPromptTextStyle" format="reference" />
+    <attr name="freshchatFAQUpvoteButtonStyle" format="reference" />
+    <attr name="freshchatFAQDownvoteButtonStyle" format="reference" />
+
+    <!-- Message Channel Item Customizations -->
+    <!-- Style for the channel list view -->
+    <attr name="freshchatChannelListStyle" format="reference" />
+
+    <!-- Style for the each of the items in the channel list -->
+    <attr name="freshchatChannelListItemStyle" format="reference" />
+    <attr name="freshchatChannelAltIconStyle" format="reference" />
+    <attr name="freshchatChannelNameTextStyle" format="reference" />
+    <attr name="freshchatChannelDescriptionTextStyle" format="reference" />
+    <attr name="freshchatChannelLastUpdatedAtTextStyle" format="reference" />
+    <attr name="freshchatChannelUnreadCountTextStyle" format="reference" />
+    <attr name="freshchatChannelListEmptyTextStyle" format="reference" />
+
+    <!-- Message List Item Customizations -->
+    <!-- Style for the message list view -->
+    <attr name="freshchatMessageListStyle" format="reference" />
+
+    <!-- Style for the each of the items in the message list -->
+    <attr name="freshchatMessageListItemStyle" format="reference" />
+    <attr name="freshchatMessageButtonStyle" format="reference" />
+    <attr name="freshchatTeamMemberNameTextStyle" format="reference" />
+    <attr name="freshchatUserMessageTextStyle" format="reference" />
+    <attr name="freshchatTeamMemberMessageTextStyle" format="reference" />
+    <attr name="freshchatUserMessageTimeTextStyle" format="reference" />
+    <attr name="freshchatTeamMemberMessageTimeTextStyle" format="reference" />
+    <attr name="freshchatVoiceMessageDurationTextStyle" format="reference" />
+
+    <!-- Style for the message reply view -->
+    <attr name="freshchatMessageReplyViewStyle" format="reference" />
+    <attr name="freshchatMessageReplyInputViewStyle" format="reference" />
+
+    <!-- Chat Resolution Confirmation Prompt Styles -->
+    <attr name="freshchatChatResolutionPromptViewStyle" format="reference" />
+    <attr name="freshchatChatResolutionPromptTextStyle" format="reference" />
+    <attr name="freshchatChatResolutionPositiveButtonStyle" format="reference" />
+    <attr name="freshchatChatResolutionNegativeButtonStyle" format="reference" />
+
+    <!-- Customer Survey Dialog Customizations -->
+    <attr name="freshchatCustomerSurveyDialog" format="reference" />
+    <attr name="freshchatCustomerSurveyQuestionTextStyle" format="reference" />
+    <attr name="freshchatCustomerSurveyRatingBarStyle" format="reference" />
+    <attr name="freshchatCustomerSurveyCommentsInputViewStyle" format="reference" />
+
+    <!-- Misc - Conversation Detail Screen -->
+    <attr name="freshchatConversationBannerMessageStyle" format="reference" />
+
+</resources>

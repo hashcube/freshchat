@@ -1,0 +1,11 @@
+{
+  "copyFiles": [
+    "FreshchatPlugin.java"
+  ],
+  "libraries": [
+    "freshchat_sdk"
+  ],
+  "jars": [],
+  "injectionXML": "manifest.xml",
+  "injectionXSL": "manifest.xsl"
+}
