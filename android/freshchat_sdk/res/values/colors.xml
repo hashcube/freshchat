@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Message list item background color -->
+    <color name="freshchat_message_list_item_bg">@null</color>
+
+    <!-- Message reply view background color -->
+    <color name="freshchat_message_reply_view_bg">@color/freshchat_white</color>
+
+    <!-- Message reply edit text view text color -->
+    <color name="freshchat_message_reply_text">#252525</color>
+
+    <!-- Message reply edit text view hint text color -->
+    <color name="freshchat_message_reply_hint_text">#606060</color>
+
+    <!-- Message unread count bubble background in channel list screen -->
+    <color name="freshchat_channel_unread_count_bg">#D32F2F</color>
+
+    <!-- Notification accent color i.e Notification#color (small icon background) Note: Works only in Android 5.0+ -->
+    <color name="freshchat_notification_accent_color">@android:color/transparent</color>
+
+    <!-- Background color for voting view in FAQ Detail -->
+    <color name="freshchat_voting_view_bg">@color/freshchat_background_light</color>
+
+    <!-- Divider colors -->
+    <!-- Divider between each item in the article list -->
+    <color name="freshchat_article_list_divider">#C7C7C7</color>
+
+    <!-- Divider above the voting view in FAQ Detail -->
+    <color name="freshchat_voting_view_divider">#BBB</color>
+
+    <!-- Divider between each message item in the message list -->
+    <color name="freshchat_message_list_divider">@null</color>
+
+    <!-- Divider between message list and reply view -->
+    <color name="freshchat_message_list_reply_view_divider">#D0D0D0</color>
+    <color name="freshchat_chat_resolution_prompt_divider">#BBB</color>
+
+    <!-- Misc Colors -->
+    <color name="freshchat_white">#ffffffff</color>
+    <color name="freshchat_black">#ff000000</color>
+    <color name="freshchat_background_light">#F6F8FA</color>
+    <color name="freshchat_text_color">#707070</color>
+    <color name="freshchat_channel_alt_text_bg">#3F51B5</color>
+    <color name="freshchat_category_alt_text_bg">#2196F3</color>
+    <color name="freshchat_category_normal">@color/freshchat_white</color>
+    <color name="freshchat_category_selected">#D8D8D8</color>
+
+    <color name="freshchat_seekbar_bg_start">#000000</color>
+    <color name="freshchat_seekbar_bg_center">#000000</color>
+    <color name="freshchat_seekbar_bg_end">#000000</color>
+
+    <color name="freshchat_seekbar_progress_start">#505050</color>
+    <color name="freshchat_seekbar_progress_center">#505050</color>
+    <color name="freshchat_seekbar_progress_end">#505050</color>
+
+    <color name="freshchat_seekbar_sec_progress_start">#80FFD300</color>
+    <color name="freshchat_seekbar_sec_progress_center">#80FFB600</color>
+    <color name="freshchat_seekbar_sec_progress_end">#A0FFCB00</color>
+
+    <color name="freshchat_visualizer_bg_start">#FFFFFF</color>
+    <color name="freshchat_visualizer_bg_center">#FFFFFF</color>
+    <color name="freshchat_visualizer_bg_end">#FFFFFF</color>
+
+    <color name="freshchat_visualizer_progress_start">#505050</color>
+    <color name="freshchat_visualizer_progress_center">#505050</color>
+    <color name="freshchat_visualizer_progress_end">#505050</color>
+
+    <color name="freshchat_visualizer_sec_progress_start">#80FFD300</color>
+    <color name="freshchat_visualizer_sec_progress_center">#80FFB600</color>
+    <color name="freshchat_visualizer_sec_progress_end">#A0FFCB00</color>
+
+    <color name="freshchat_contact_us_btn_bg_normal">#2196F3</color>
+    <color name="freshchat_contact_us_btn_bg_pressed">#1976D2</color>
+</resources>

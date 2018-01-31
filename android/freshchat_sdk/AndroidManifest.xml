@@ -1,0 +1,80 @@
+<manifest
+    package="com.freshchat.consumer.sdk"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- [Mandatory] Freshchat requires internet to send and receive messages -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- [Optional] Freshchat needs RECORD_AUDIO permission to record voice messages -->
+    <!-- Can be removed/negated if voice messaging is disabled -->
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+
+    <!-- [Optional] Freshchat needs external storage access to store voice messages -->
+    <!-- Can be removed/negated if voice messaging is disabled -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  -->
+
+    <uses-sdk android:minSdkVersion="16" />
+
+    <application>
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity"
+            android:theme="@style/Theme.Freshchat.SelectedTheme" />
+
+        <activity
+            android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat" />
+
+        <service android:name="com.freshchat.consumer.sdk.service.FreshchatService" />
+
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
