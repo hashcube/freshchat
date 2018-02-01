@@ -10,7 +10,8 @@
     },
     "extensions": {
       "build": "build",
-      "android": "android"
+      "android": "android",
+      "ios": "ios"
     }
   },
   "dependencies": {
