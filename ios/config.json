@@ -1,0 +1,29 @@
+{
+  "code": [
+    "Freshchat.h",
+    "FreshchatPlugin.h",
+    "FreshchatPlugin.mm"
+  ],
+  "frameworks": [
+    "Foundation",
+    "AssetsLibrary",
+    "Photos",
+    "AVFoundation",
+    "AudioToolbox",
+    "CoreMedia",
+    "CoreData",
+    "ImageIO",
+    "SystemConfiguration",
+    "libFDFreshchatSDK.a"
+  ],
+  "resources": [
+    "FCLocalization.bundle",
+    "FCResources.bundle",
+    "FreshchatModels.bundle"
+  ],
+  "plist": {
+    "NSMicrophoneUsageDescription": "This game uses the microphone, so you can send us voice feedback",
+    "NSPhotoLibraryUsageDescription": "This game uses the photos, so you can send us pictures of the problem you are facing",
+    "NSCameraUsageDescription": "This game uses the camera, so you can send us pictures of the problem you are facing"
+  }
+}
