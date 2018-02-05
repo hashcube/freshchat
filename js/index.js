@@ -43,8 +43,11 @@ exports = new (Class(function () {
     });
   };
 
-  this.setName = function (name) {
-    pluginSend("setName", {name: name});
+  this.setName = function (first_name, last_name) {
+    pluginSend("setName", {
+      first_name: first_name,
+      last_name: last_name
+    });
   };
 
   this.setEmail = function (email) {
