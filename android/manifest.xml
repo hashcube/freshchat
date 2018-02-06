@@ -16,6 +16,7 @@
 <!--START_PLUGINS_APPLICATION-->
 <meta-data android:name="FRESHCHAT_APP_ID" android:value="" />
 <meta-data android:name="FRESHCHAT_APP_KEY" android:value="" />
+<meta-data android:name="FRESHCHAT_TAG" android:value="" />
 
 <activity
     android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity"

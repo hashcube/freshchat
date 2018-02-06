@@ -13,6 +13,8 @@ import android.content.pm.PackageManager;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 import java.lang.Runnable;
@@ -24,6 +26,7 @@ public class FreshchatPlugin implements IPlugin {
   private Context appContext;
   private Activity appActivity;
   private FreshchatUser fchatUser;
+  private String fTag = "";
 
   private final String TAG = "{freshchat}";
 
@@ -45,6 +48,7 @@ public class FreshchatPlugin implements IPlugin {
         PackageManager.GET_META_DATA).metaData;
       appId = meta.get("FRESHCHAT_APP_ID").toString();
       appKey = meta.get("FRESHCHAT_APP_KEY").toString();
+      fTag = meta.get("FRESHCHAT_TAG").toString();
     } catch (Exception ex) {
       logger.log(TAG + "{exception}", "" + ex.getMessage());
     }
@@ -62,41 +66,41 @@ public class FreshchatPlugin implements IPlugin {
 
   public void onResume() {
   }
-  
+
   public void onRenderResume() {
   }
-  
+
   public void onStart() {
   }
-  
+
   public void onFirstRun() {
   }
-  
+
   public void onPause() {
   }
-  
+
   public void onRenderPause() {
   }
-  
+
   public void onStop() {
   }
-  
+
   public void onDestroy() {
   }
-  
+
   public void onNewIntent(Intent intent) {
   }
-  
+
   public void setInstallReferrer(String referrer) {
   }
-  
+
   public void onActivityResult(Integer request, Integer result, Intent data) {
   }
-  
+
   public boolean consumeOnBackPressed() {
     return true;
   }
-  
+
   public void onBackPressed() {
   }
 
@@ -161,7 +165,17 @@ public class FreshchatPlugin implements IPlugin {
       appActivity.runOnUiThread(new Runnable () {
         @Override
         public void run() {
-          Freshchat.showConversations(appContext);
+          ConversationOptions convOptions = null;
+
+          if (!fTag.isEmpty()) {
+            List<String> tags = new ArrayList<String>();
+            tags.add(fTag);
+
+            convOptions = new ConversationOptions()
+              .filterByTags(tags, "Messages");
+          }
+
+          Freshchat.showConversations(appActivity, convOptions);
         }
       });
     } catch (Exception ex) {
@@ -174,10 +188,21 @@ public class FreshchatPlugin implements IPlugin {
       appActivity.runOnUiThread(new Runnable () {
         @Override
         public void run() {
-          Freshchat.showFAQs(appContext);
+          FaqOptions faqOptions = null;
+
+          if (!fTag.isEmpty()) {
+            List<String> tags = new ArrayList<String>();
+            tags.add(fTag);
+
+            faqOptions = new FaqOptions()
+              .filterByTags(tags, "FAQs", FaqOptions.FilterType.CATEGORY)
+              .filterContactUsByTags(tags, "Message Us");
+          }
+
+          Freshchat.showFAQs(appActivity, faqOptions);
         }
       });
- 
+
     } catch (Exception e) {
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
