@@ -3,6 +3,7 @@
 
   <xsl:param name="freshchatAppID" />
   <xsl:param name="freshchatAppKey" />
+  <xsl:param name="freshchatTag" />
   <xsl:param name="package" />
 
   <xsl:output indent="yes" />
@@ -15,6 +16,11 @@
   <xsl:template match="meta-data[@android:name='FRESHCHAT_APP_KEY']">
     <meta-data android:name="FRESHCHAT_APP_KEY" android:value="{$freshchatAppKey}" />
   </xsl:template>
+
+  <xsl:template match="meta-data[@android:name='FRESHCHAT_TAG']">
+    <meta-data android:name="FRESHCHAT_TAG" android:value="{$freshchatTag}" />
+  </xsl:template>
+
 
   <xsl:template match="provider/@android:authorities[.='your_package_name.provider']">
     <xsl:attribute name="android:authorities">
