@@ -25,6 +25,7 @@
     NSDictionary *ios = [manifest valueForKey:@"ios"];
     NSString *appID = [ios valueForKey:@"freshchatAppID"];
     NSString *appKey = [ios valueForKey:@"freshchatAppKey"];
+    self.app_tag = [ios valueForKey:@"freshchatTag"];
 
     self.viewController = appDelegate.tealeafViewController;
 
@@ -65,8 +66,11 @@
 }
 
 - (void) showConversations: (NSDictionary *)jsonObject {
-  NSLog(@"Showing coversations");
-  [[Freshchat sharedInstance] showConversations:self.viewController];
+  ConversationOptions *options = [ConversationOptions new];
+  if (self.app_tag != nil) {
+      [options filterByTags:@[ self.app_tag ] withTitle: @"Messages"];
+  }
+  [[Freshchat sharedInstance] showConversations:self.viewController withOptions: options];
 }
 
 - (void) showFAQs: (NSDictionary *)jsonObject {
@@ -74,6 +78,11 @@
 
   options.showContactUsOnFaqScreens = YES;
   options.showContactUsOnAppBar = YES;
+
+    if (self.app_tag != nil) {
+        [options filterByTags:@[ self.app_tag ] withTitle: @"Message Us" andType: CATEGORY];
+        [options filterContactUsByTags:@[ self.app_tag ] withTitle: @"Contact Us"];
+    }
   [[Freshchat sharedInstance] showFAQs:self.viewController withOptions:options];
 }
 
