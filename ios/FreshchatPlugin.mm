@@ -67,7 +67,9 @@
 
 - (void) showConversations: (NSDictionary *)jsonObject {
   ConversationOptions *options = [ConversationOptions new];
-  [options filterByTags:@[ self.app_tag ] withTitle: @"Messages"];
+  if (self.app_tag != nil) {
+      [options filterByTags:@[ self.app_tag ] withTitle: @"Messages"];
+  }
   [[Freshchat sharedInstance] showConversations:self.viewController withOptions: options];
 }
 
@@ -77,8 +79,10 @@
   options.showContactUsOnFaqScreens = YES;
   options.showContactUsOnAppBar = YES;
 
-  [options filterByTags:@[ self.app_tag ] withTitle: @"Message Us" andType: CATEGORY];
-  [options filterContactUsByTags:@[ self.app_tag ] withTitle: @"Contact Us"];
+    if (self.app_tag != nil) {
+        [options filterByTags:@[ self.app_tag ] withTitle: @"Message Us" andType: CATEGORY];
+        [options filterContactUsByTags:@[ self.app_tag ] withTitle: @"Contact Us"];
+    }
   [[Freshchat sharedInstance] showFAQs:self.viewController withOptions:options];
 }
 
