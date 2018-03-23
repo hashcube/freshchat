@@ -10,6 +10,7 @@ import android.content.Context;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 
 import org.json.JSONObject;
 
@@ -28,10 +29,18 @@ public class FreshchatPlugin implements IPlugin {
   private FreshchatUser fchatUser;
   private String fTag = "";
 
+  private boolean emailSupport = false;
+  private String emailId = "";
+  private Map<String, String> emailProps = new HashMap<String, String>();
+
   private final String TAG = "{freshchat}";
 
   public void onCreateApplication(Context applicationContext) {
     appContext = applicationContext;
+  }
+
+  private String getApplicationName() {
+    return appContext.getApplicationInfo().loadLabel(appContext.getPackageManager()).toString();
   }
 
   public void onCreate(Activity activity, Bundle savedInstanceState) {
@@ -42,6 +51,8 @@ public class FreshchatPlugin implements IPlugin {
 
     appActivity = activity;
 
+    emailSupport = android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP;
+
     logger.log(TAG + "inside onCReate");
     try {
       Bundle meta = manager.getApplicationInfo(activity.getApplicationContext().getPackageName(),
@@ -49,6 +60,7 @@ public class FreshchatPlugin implements IPlugin {
       appId = meta.get("FRESHCHAT_APP_ID").toString();
       appKey = meta.get("FRESHCHAT_APP_KEY").toString();
       fTag = meta.get("FRESHCHAT_TAG").toString();
+      emailId = meta.get("FRESHCHAT_EMAIL").toString();
     } catch (Exception ex) {
       logger.log(TAG + "{exception}", "" + ex.getMessage());
     }
@@ -61,6 +73,7 @@ public class FreshchatPlugin implements IPlugin {
 
     Freshchat.getInstance(appContext).init(fchatConfig);
     fchatUser = Freshchat.getInstance(appContext).getUser();
+
     logger.log(TAG + "end of onCreate");
   }
 
@@ -104,13 +117,49 @@ public class FreshchatPlugin implements IPlugin {
   public void onBackPressed() {
   }
 
+  private String getMailContent() {
+    StringBuilder sb = new StringBuilder();
+
+    sb.append("============= User Details ============\n");
+    for (Map.Entry<String, String> curr: emailProps.entrySet()) {
+      sb.append(curr.getKey() + " : " + curr.getValue() + "\n");
+    }
+    sb.append("=======================================\n\n\n\n");
+    sb.append("PLEASE WRITE YOUR FEEDBACK BELOW:\n\n");
+
+    return sb.toString();
+  }
+
+  private void sendEmail() {
+    logger.log(TAG + "{support email}", "" + emailId);
+    Intent emailIntent = new Intent(Intent.ACTION_VIEW);
+
+    emailIntent.setData(Uri.parse("mailto:"));
+    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailId, ""});
+    emailIntent.putExtra(Intent.EXTRA_SUBJECT, fTag + " - Support");
+    emailIntent.putExtra(Intent.EXTRA_TEXT, getMailContent());
+
+    try {
+      appActivity.startActivity(Intent.createChooser(emailIntent, "Contact " + getApplicationName() + " Using:"));
+    } catch (android.content.ActivityNotFoundException ex) {
+      logger.log(TAG + "{exception}", "" + ex.getMessage());
+    }
+  }
+
   public void setName (String param) {
     JSONObject reqJson;
 
     try {
+      fchatUser = Freshchat.getInstance(appContext).getUser();
       reqJson = new JSONObject(param);
       fchatUser.setFirstName(reqJson.getString("first_name"));
       fchatUser.setLastName(reqJson.getString("last_name"));
+      Freshchat.getInstance(appContext).setUser(fchatUser);
+
+      if (emailSupport) {
+        emailProps.put("first_name", reqJson.getString("first_name"));
+        emailProps.put("last_name", reqJson.getString("last_name"));
+      }
     } catch (Exception e) {
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
@@ -120,8 +169,14 @@ public class FreshchatPlugin implements IPlugin {
     JSONObject reqJson;
 
     try {
+      fchatUser = Freshchat.getInstance(appContext).getUser();
       reqJson = new JSONObject(param);
       fchatUser.setEmail(reqJson.getString("email"));
+      Freshchat.getInstance(appContext).setUser(fchatUser);
+
+      if (emailSupport) {
+        emailProps.put("email", reqJson.getString("email"));
+      }
     } catch (Exception e){
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
@@ -134,6 +189,10 @@ public class FreshchatPlugin implements IPlugin {
       reqJson = new JSONObject(param);
       Freshchat.getInstance(appContext).identifyUser(reqJson.getString("id"),
         null);
+
+      if (emailSupport) {
+        emailProps.put("user_id", reqJson.getString("id"));
+      }
     } catch (Exception e){
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
@@ -146,6 +205,11 @@ public class FreshchatPlugin implements IPlugin {
     try {
       reqJson = new JSONObject(param);
       userMeta.put(reqJson.getString("field_name"), reqJson.getString("value"));
+
+      if (emailSupport) {
+        emailProps.put(reqJson.getString("field_name"),
+          String.valueOf(reqJson.getString("value")));
+      }
     } catch (Exception e){
       logger.log(TAG + "{exception}", "" + e.getMessage());
     }
@@ -155,12 +219,19 @@ public class FreshchatPlugin implements IPlugin {
   public void clearUserData(String param) {
     try {
       Freshchat.resetUser(appContext);
+
+      emailProps.clear();
     } catch (Exception ex) {
       logger.log(TAG + "{exception}", "" + ex.getMessage());
     }
   }
 
   public void showConversations(String params) {
+    if (emailSupport) {
+      this.sendEmail();
+      return;
+    }
+
     try {
       appActivity.runOnUiThread(new Runnable () {
         @Override
@@ -184,6 +255,11 @@ public class FreshchatPlugin implements IPlugin {
   }
 
   public void showFAQs(String params) {
+    if (emailSupport) {
+      this.sendEmail();
+      return;
+    }
+
     try {
       appActivity.runOnUiThread(new Runnable () {
         @Override
