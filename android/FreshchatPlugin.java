@@ -10,7 +10,6 @@ import android.content.Context;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.pm.PackageManager;
-import android.widget.Toast;
 import android.net.Uri;
 
 import org.json.JSONObject;
