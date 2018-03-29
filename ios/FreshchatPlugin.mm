@@ -57,12 +57,12 @@
 
 - (void) addMetaData: (NSDictionary *)jsonObject {
   [[Freshchat sharedInstance]
-    updateUserPropertyforKey:[jsonObject objectForKey:@"field_name"]
+    setUserPropertyforKey:[jsonObject objectForKey:@"field_name"]
     withValue:[jsonObject objectForKey:@"value"]];
 }
 
 - (void) clearUserData: (NSDictionary *)jsonObject {
-  [[Freshchat sharedInstance] clearUserDataWithCompletion:nil];
+  [[Freshchat sharedInstance] resetUserWithCompletion:nil];
 }
 
 - (void) showConversations: (NSDictionary *)jsonObject {
