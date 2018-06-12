@@ -2,7 +2,7 @@
   "copyFiles": [
     "FreshchatPlugin.java"
   ],
-  "libraries": [
+  "jars": [
     "freshchat_sdk/freshchat_sdk/build/outputs/aar/freshchat_sdk-debug.aar"
   ],
   "jars": [],
