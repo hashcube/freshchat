@@ -3,7 +3,7 @@
     "FreshchatPlugin.java"
   ],
   "libraries": [
-    "freshchat_sdk"
+    "freshchat_sdk/freshchat_sdk/build/outputs/aar/freshchat_sdk-debug.aar"
   ],
   "jars": [],
   "injectionXML": "manifest.xml",
