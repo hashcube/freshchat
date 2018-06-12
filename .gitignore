@@ -17,4 +17,4 @@ android/freshchat_sdk/idea
 android/freshchat_sdk/DS_Store
 !android/freshchat_sdk/freshchat_sdk/build
 android/freshchat_sdk/freshchat_sdk/build/*
-!android/freshchat_sdk/freshchat_sdk/build/outputs
+!android/freshchat_sdk/freshchat_sdk/build/outputs/aar/
