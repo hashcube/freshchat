@@ -15,7 +15,6 @@ android/freshchat_sdk/local.properties
 android/freshchat_sdk/idea
 .DS_Store
 android/freshchat_sdk/DS_Store
-!/android/freshchat_sdk/freshchat_sdk/build
-/android/freshchat_sdk/freshchat_sdk/build/**
-!/android/freshchat_sdk/freshchat_sdk/build/outputs/aar/
-
+!android/freshchat_sdk/freshchat_sdk/build
+android/freshchat_sdk/freshchat_sdk/build/*
+!android/freshchat_sdk/freshchat_sdk/build/outputs
