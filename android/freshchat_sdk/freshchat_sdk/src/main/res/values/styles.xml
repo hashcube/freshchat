@@ -4,13 +4,13 @@
 
     <style name="Widget.Freshchat" />
 
-    <style name="TextAppearance.Freshchat" parent="TextAppearance.AppCompat"></style>
+    <style name="TextAppearance.Freshchat" parent="Base.TextAppearance.AppCompat"></style>
 
-    <style name="TextAppearance.Freshchat.Small" parent="TextAppearance.AppCompat.Small"></style>
+    <style name="TextAppearance.Freshchat.Small" parent="Base.TextAppearance.AppCompat.Small"></style>
 
-    <style name="TextAppearance.Freshchat.Medium" parent="TextAppearance.AppCompat.Medium"></style>
+    <style name="TextAppearance.Freshchat.Medium" parent="Base.TextAppearance.AppCompat.Medium"></style>
 
-    <style name="TextAppearance.Freshchat.Large" parent="TextAppearance.AppCompat.Large"></style>
+    <style name="TextAppearance.Freshchat.Large" parent="Base.TextAppearance.AppCompat.Large"></style>
 
     <!-- Message Styling & Customizations -->
 

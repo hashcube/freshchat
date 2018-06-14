@@ -11,8 +11,9 @@ node_modules
 *.iml
 android/freshchat_sdk/.gradle
 android/freshchat_sdk/local.properties
+android/freshchat_sdk/captures
 
-android/freshchat_sdk/idea
+android/freshchat_sdk/.idea
 .DS_Store
 android/freshchat_sdk/DS_Store
 !android/freshchat_sdk/freshchat_sdk/build
@@ -20,3 +21,5 @@ android/freshchat_sdk/freshchat_sdk/build/*
 !android/freshchat_sdk/freshchat_sdk/build/outputs
 android/freshchat_sdk/freshchat_sdk/build/outputs/*
 !android/freshchat_sdk/freshchat_sdk/build/outputs/aar/
+
+android/freshchat_sdk/build/android-profile
