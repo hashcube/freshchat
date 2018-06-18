@@ -22,5 +22,6 @@ android/freshchat_sdk/DS_Store
 !/android/freshchat_sdk/freshchat_sdk/build/outputs
 /android/freshchat_sdk/freshchat_sdk/build/outputs/*
 !/android/freshchat_sdk/freshchat_sdk/build/outputs/aar
+!/android/freshchat_sdk/freshchat_sdk/build/outputs/aar/freshchat_sdk-debug.aar
 
 android/freshchat_sdk/build/android-profile
