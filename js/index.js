@@ -58,11 +58,8 @@ exports = new (Class(function () {
     pluginSend("setExternalId", {id: id});
   };
 
-  this.addMetaData = function (name, value) {
-    if (typeof value !== "string") {
-      value = JSON.stringify(value);
-    }
-    pluginSend("addMetaData", {field_name: name, value: value});
+  this.addMetaData = function (obj) {
+    pluginSend("addMetaData", obj);
   };
 
   this.clearUserData = function () {
