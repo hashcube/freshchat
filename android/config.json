@@ -2,10 +2,8 @@
   "copyFiles": [
     "FreshchatPlugin.java"
   ],
-  "libraries": [
-    "freshchat_sdk"
-  ],
-  "jars": [],
   "injectionXML": "manifest.xml",
-  "injectionXSL": "manifest.xsl"
+  "injectionXSL": "manifest.xsl",
+  "injectionTealeafModuleGradleXML": "gradletealeaf.xml",
+  "injectionGradleClasspathXML": "gradleclasspath.xml"
 }

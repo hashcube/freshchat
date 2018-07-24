@@ -1,9 +1,6 @@
 {
   "name": "freshchat",
   "version": "1.0.8",
-  "scripts": {
-    "postinstall": "sh ./postinstall.sh"
-  },
   "devkit": {
     "clientPaths": {
       "freshchat": "js"

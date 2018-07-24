@@ -1,0 +1,4 @@
+//<!--START_PLUGINS_DEPENDENCIES-->
+	//<!--Freshchat Dependencies-->
+   implementation 'com.github.freshdesk:freshchat-android:1.4.2'
+//<!--END_PLUGINS_DEPENDENCIES-->
