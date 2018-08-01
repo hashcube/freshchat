@@ -1,0 +1,8 @@
+//<!--START_STYLES-->
+	//<!--Freshchat Styles-->
+    <style name="Widget.Freshchat.FAQList">
+        <item name="android:divider">@color/freshchat_article_list_divider</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
+    </style>
+//<!--END_STYLES-->
