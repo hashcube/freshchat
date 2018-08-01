@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 import java.lang.Runnable;
+import java.util.Iterator;
 
 import com.freshchat.consumer.sdk.*;
 
@@ -198,17 +199,21 @@ public class FreshchatPlugin implements IPlugin {
     }
   }
 
-  public void addMetaData (String param) {
+  public void addMetaData (String params) {
     JSONObject reqJson;
+    String key;
     Map<String, String> userMeta = new HashMap<String, String>();
 
     try {
-      reqJson = new JSONObject(param);
-      userMeta.put(reqJson.getString("field_name"), reqJson.getString("value"));
+      reqJson = new JSONObject(params);
+      Iterator<String> iter = reqJson.keys();
+      while (iter.hasNext()) {
+        key = iter.next();
+        userMeta.put(key, reqJson.getString(key));
 
-      if (emailSupport) {
-        emailProps.put(reqJson.getString("field_name"),
-          String.valueOf(reqJson.getString("value")));
+        if (emailSupport) {
+          emailProps.put(key, String.valueOf(reqJson.getString(key)));
+        }
       }
     } catch (Exception e){
       logger.log(TAG + "{exception}", "" + e.getMessage());
