@@ -1,0 +1,3 @@
+[submodule "android/freshchat-android"]
+	path = android/freshchat-android
+	url = https://github.com/CodeCombiner/freshchat-android
