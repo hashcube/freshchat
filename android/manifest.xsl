@@ -26,13 +26,6 @@
     <meta-data android:name="FRESHCHAT_EMAIL" android:value="{$freshchatEmail}" />
   </xsl:template>
 
-
-  <xsl:template match="provider/@android:authorities[.='your_package_name.provider']">
-    <xsl:attribute name="android:authorities">
-      <xsl:value-of select="concat($package, '.provider')" />
-    </xsl:attribute>
-  </xsl:template>
-
   <xsl:output indent="yes" />
   <xsl:template match="comment()" />
 
