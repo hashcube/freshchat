@@ -1,9 +1,6 @@
 {
   "name": "freshchat",
   "version": "1.0.10",
-  "scripts": {
-    "postinstall": "sh ./postinstall.sh"
-  },
   "devkit": {
     "clientPaths": {
       "freshchat": "js"
@@ -17,5 +14,8 @@
   "dependencies": {
     "fs-extra": "^1.0.0",
     "xmldoc": "^0.5.1"
+  },
+  "scripts": {
+    "preinstall": "sh scripts/preinstall.sh"
   }
 }

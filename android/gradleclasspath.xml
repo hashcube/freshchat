@@ -1,0 +1,4 @@
+//<!--START_PLUGINS_REPOSITORIES-->
+	//<!--Freshchat Dependencies-->
+maven { url "https://jitpack.io" }
+//<!--END_PLUGINS_REPOSITORIES-->
